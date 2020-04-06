@@ -1,0 +1,9 @@
+models/numpy/*.npy filter=lfs diff=lfs merge=lfs -text
+*.ckpt* filter=lfs diff=lfs merge=lfs -text
+docker/* linguist-vendored
+etcs/* linguist-vendored
+images/* linguist-vendored
+launch/* linguist-vendored
+models/* linguist-vendored
+msg/* linguist-vendored
+scripts/* linguist-vendored
