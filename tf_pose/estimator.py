@@ -304,6 +304,10 @@ class TfPoseEstimator:
     # TODO : multi-scale
 
     def __init__(self, graph_path, target_size=(320, 240), tf_config=None, trt_bool=False):
+        physical_devices = tf.config.experimental.list_physical_devices("GPU")
+        for physical_device in physical_devices:
+            tf.config.experimental.set_memory_growth(physical_device, enable=True)
+
         self.target_size = target_size
 
         # load graph
